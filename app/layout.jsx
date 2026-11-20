@@ -2,7 +2,7 @@
 // ROOT LAYOUT — wraps every page with the fonts, theme, navbar and footer.
 // SEO title/description are set in `metadata` below.
 // ─────────────────────────────────────────────────────────────
-import { Inter, JetBrains_Mono, Crimson_Pro } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import Providers from "@/components/Providers";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -11,8 +11,6 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" });
-// Serif font used only by the printed resume (components/ResumePrint.jsx)
-const serif = Crimson_Pro({ subsets: ["latin", "latin-ext"], variable: "--font-serif" });
 
 export const metadata = {
   metadataBase: new URL("https://ibrahimdev.cloud"),
@@ -23,7 +21,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning className={`${inter.variable} ${mono.variable} ${serif.variable}`}>
+    <html lang="en" suppressHydrationWarning className={`${inter.variable} ${mono.variable}`}>
       <body className="flex min-h-screen flex-col font-sans antialiased">
         <Providers>
           <Navbar />

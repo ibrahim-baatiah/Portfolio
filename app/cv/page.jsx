@@ -1,11 +1,10 @@
 // ─────────────────────────────────────────────────────────────
 // CV PAGE — experience, education, certifications, skills, languages.
 // Content: data/cv.js, data/skills.js, data/profile.js.
-// "Download PDF" uses the browser's print dialog (print styles are in globals.css).
+// "Download PDF" downloads public/Ibrahim_Baatiah_Resume.pdf (see components/DownloadButton.jsx).
 // ─────────────────────────────────────────────────────────────
 import PageHeader from "@/components/PageHeader";
-import PrintButton from "@/components/PrintButton";
-import ResumePrint from "@/components/ResumePrint";
+import DownloadButton from "@/components/DownloadButton";
 import SectionHeading from "@/components/SectionHeading";
 import Timeline from "@/components/Timeline";
 import Tag from "@/components/Tag";
@@ -26,8 +25,7 @@ const contactLinks = [
 export default function CV() {
   return (
     <>
-    {/* Web version of the CV (hidden when printing) */}
-    <div className="mx-auto w-full max-w-4xl px-6 py-16 sm:py-20 print:hidden">
+        <div className="mx-auto w-full max-w-4xl px-6 py-16 sm:py-20">
       <PageHeader eyebrow="Curriculum vitae" title={profile.name} subtitle={`${profile.title} · ${profile.location}`}>
         {/* Contact links: icon + label. Edit the list in `contactLinks` above. */}
         <div className="mt-5 flex flex-wrap gap-x-6 gap-y-2 text-sm">
@@ -43,7 +41,7 @@ export default function CV() {
             </a>
           ))}
         </div>
-        <div className="mt-8"><PrintButton /></div>
+        <div className="mt-8"><DownloadButton /></div>
       </PageHeader>
 
       <div className="space-y-20 print:space-y-8">
@@ -103,9 +101,6 @@ export default function CV() {
         </section>
       </div>
     </div>
-
-    {/* Resume layout used for "Download PDF" (only visible when printing) */}
-    <ResumePrint />
     </>
   );
 }

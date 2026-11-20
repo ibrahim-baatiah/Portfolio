@@ -4,7 +4,7 @@
 // ─────────────────────────────────────────────────────────────
 
 // Each point has a short bold `title` and the `text` that follows it.
-// These are used on the CV web page AND the "Download PDF" resume.
+// These are shown on the CV web page.
 export const experience = [
   {
     role: "Cloud & Infra Management Engineer",
