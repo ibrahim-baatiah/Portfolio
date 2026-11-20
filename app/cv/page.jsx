@@ -8,19 +8,38 @@ import PrintButton from "@/components/PrintButton";
 import SectionHeading from "@/components/SectionHeading";
 import Timeline from "@/components/Timeline";
 import Tag from "@/components/Tag";
+import Icon from "@/components/Icon";
 import { profile } from "@/data/profile";
 import { experience, education, certifications } from "@/data/cv";
 import { skills } from "@/data/skills";
 
 export const metadata = { title: "CV" };
 
+// Links shown under your name at the top of the CV
+const contactLinks = [
+  { icon: "mail", label: "Email", href: `mailto:${profile.email}` },
+  { icon: "linkedin", label: "LinkedIn", href: profile.links.linkedin },
+  { icon: "github", label: "GitHub", href: profile.links.github },
+];
+
 export default function CV() {
   return (
     <div className="mx-auto w-full max-w-4xl px-6 py-16 sm:py-20 print:py-0">
       <PageHeader eyebrow="Curriculum vitae" title={profile.name} subtitle={`${profile.title} · ${profile.location}`}>
-        <p className="mt-2 text-sm text-muted">
-          {profile.email} · linkedin.com/in/ibrahim-baatiah · github.com/ibrahim-baatiah
-        </p>
+        {/* Contact links: icon + label. Edit the list in `contactLinks` above. */}
+        <div className="mt-5 flex flex-wrap gap-x-6 gap-y-2 text-sm">
+          {contactLinks.map((l) => (
+            <a
+              key={l.label}
+              href={l.href}
+              target={l.href.startsWith("http") ? "_blank" : undefined}
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 font-medium text-muted transition hover:text-accent"
+            >
+              <Icon name={l.icon} className="h-4 w-4" /> {l.label}
+            </a>
+          ))}
+        </div>
         <div className="mt-8"><PrintButton /></div>
       </PageHeader>
 
