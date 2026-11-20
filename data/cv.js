@@ -10,7 +10,7 @@ export const experience = [
     period: "Present",
     location: "Poland",
     points: [
-      "Wrote a PowerShell script to perform DFSR SYSVOL authoritative/non-authoritative syncs across multiple domain controllers, cutting a recurring manual fix from ~40 to ~10 minutes.",
+      "Wrote a PowerShell script to perform DFSR SYSVOL authoritative/non-authoritative syncs across multiple domain controllers, turning a manual fix that grew with every server into one that finishes in about a minute regardless of environment size.",
       "Resolved technical incidents for Microsoft global enterprise customers with a 95% first-contact resolution rate.",
       "Co-authored internal documentation that reduced repetitive incidents, cutting team incident load by 25%.",
       "Fixed Active Directory sign-in issues in hybrid environments, including Kerberos, Group Policy and domain controller replication.",

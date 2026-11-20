@@ -2,7 +2,7 @@
 // ABOUT PAGE — "My Story" only.
 // Edit the paragraphs in data/profile.js → `story`.
 // ─────────────────────────────────────────────────────────────
-import SectionHeading from "@/components/SectionHeading";
+import PageHeader from "@/components/PageHeader";
 import { story, storySignOff } from "@/data/profile";
 
 export const metadata = { title: "About" };
@@ -20,8 +20,8 @@ function Highlight({ text }) {
 
 export default function About() {
   return (
-    <section className="mx-auto max-w-3xl px-6 py-20 sm:py-24">
-      <SectionHeading number="01" title="My Story" />
+    <section className="mx-auto w-full max-w-3xl px-6 py-16 sm:py-20">
+      <PageHeader eyebrow="About me" title="My Story" />
 
       <div className="space-y-6 text-lg leading-relaxed text-muted">
         {story.map((paragraph, i) => (

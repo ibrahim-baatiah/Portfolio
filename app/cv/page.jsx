@@ -16,15 +16,15 @@ export const metadata = { title: "CV" };
 
 export default function CV() {
   return (
-    <>
+    <div className="mx-auto w-full max-w-4xl px-6 py-16 sm:py-20 print:py-0">
       <PageHeader eyebrow="Curriculum vitae" title={profile.name} subtitle={`${profile.title} · ${profile.location}`}>
-        <p className="mt-2 text-sm text-hero-muted">
+        <p className="mt-2 text-sm text-muted">
           {profile.email} · linkedin.com/in/ibrahim-baatiah · github.com/ibrahim-baatiah
         </p>
         <div className="mt-8"><PrintButton /></div>
       </PageHeader>
 
-      <div className="mx-auto max-w-4xl space-y-20 px-6 py-20 print:space-y-8 print:py-6">
+      <div className="space-y-20 print:space-y-8">
         <section>
           <SectionHeading number="01" title="Experience" />
           <Timeline
@@ -78,6 +78,6 @@ export default function CV() {
           <p className="text-muted">{profile.languages.map((l) => `${l.name} (${l.level})`).join(" · ")}</p>
         </section>
       </div>
-    </>
+    </div>
   );
 }

@@ -17,9 +17,9 @@ const channels = [
 
 export default function Contact() {
   return (
-    <>
+    <section className="mx-auto w-full max-w-6xl px-6 py-16 sm:py-20">
       <PageHeader eyebrow="Contact" title="Let's chat" subtitle="Got a question, an idea, or just want to chat about cloud stuff? Drop me a message, I don't bite." />
-      <section className="mx-auto grid max-w-6xl gap-12 px-6 py-20 lg:grid-cols-2">
+      <div className="grid gap-12 lg:grid-cols-2">
         <div className="space-y-4">
           {channels.map((c) => {
             const inner = (
@@ -41,7 +41,7 @@ export default function Contact() {
           })}
         </div>
         <ContactForm email={profile.email} />
-      </section>
-    </>
+      </div>
+    </section>
   );
 }
