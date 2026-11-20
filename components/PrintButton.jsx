@@ -2,6 +2,7 @@
 
 // ─────────────────────────────────────────────────────────────
 // PRINT BUTTON — opens the browser print dialog so the CV can be saved as PDF.
+// What gets printed is components/ResumePrint.jsx, not the web page.
 // ─────────────────────────────────────────────────────────────
 import Icon from "./Icon";
 

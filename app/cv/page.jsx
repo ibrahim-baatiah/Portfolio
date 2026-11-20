@@ -5,6 +5,7 @@
 // ─────────────────────────────────────────────────────────────
 import PageHeader from "@/components/PageHeader";
 import PrintButton from "@/components/PrintButton";
+import ResumePrint from "@/components/ResumePrint";
 import SectionHeading from "@/components/SectionHeading";
 import Timeline from "@/components/Timeline";
 import Tag from "@/components/Tag";
@@ -24,7 +25,9 @@ const contactLinks = [
 
 export default function CV() {
   return (
-    <div className="mx-auto w-full max-w-4xl px-6 py-16 sm:py-20 print:py-0">
+    <>
+    {/* Web version of the CV (hidden when printing) */}
+    <div className="mx-auto w-full max-w-4xl px-6 py-16 sm:py-20 print:hidden">
       <PageHeader eyebrow="Curriculum vitae" title={profile.name} subtitle={`${profile.title} · ${profile.location}`}>
         {/* Contact links: icon + label. Edit the list in `contactLinks` above. */}
         <div className="mt-5 flex flex-wrap gap-x-6 gap-y-2 text-sm">
@@ -52,7 +55,9 @@ export default function CV() {
               meta: `${x.period} · ${x.location}`,
               children: (
                 <ul className="list-disc space-y-2 pl-5 text-sm leading-relaxed text-muted">
-                  {x.points.map((p, i) => <li key={i}>{p}</li>)}
+                  {x.points.map((p) => (
+                    <li key={p.title}><span className="font-semibold text-text">{p.title}:</span> {p.text}</li>
+                  ))}
                 </ul>
               ),
             }))}
@@ -98,5 +103,9 @@ export default function CV() {
         </section>
       </div>
     </div>
+
+    {/* Resume layout used for "Download PDF" (only visible when printing) */}
+    <ResumePrint />
+    </>
   );
 }

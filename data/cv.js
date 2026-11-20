@@ -3,28 +3,48 @@
 // Skills come from data/skills.js and languages from data/profile.js.
 // ─────────────────────────────────────────────────────────────
 
+// Each point has a short bold `title` and the `text` that follows it.
+// These are used on the CV web page AND the "Download PDF" resume.
 export const experience = [
   {
     role: "Cloud & Infra Management Engineer",
     company: "LTM",
-    period: "Present",
-    location: "Poland",
+    period: "Mar 2024 – Present",
+    location: "Kraków, Poland",
     points: [
-      "Wrote a PowerShell script to perform DFSR SYSVOL authoritative/non-authoritative syncs across multiple domain controllers, turning a manual fix that grew with every server into one that finishes in about a minute regardless of environment size.",
-      "Resolved technical incidents for Microsoft global enterprise customers with a 95% first-contact resolution rate.",
-      "Co-authored internal documentation that reduced repetitive incidents, cutting team incident load by 25%.",
-      "Fixed Active Directory sign-in issues in hybrid environments, including Kerberos, Group Policy and domain controller replication.",
-      "Owned enterprise incidents end to end across VMs, network connectivity, DNS, storage and access.",
+      {
+        title: "SYSVOL Repair Automation",
+        text: "Wrote a PowerShell script that performs DFSR SYSVOL authoritative/non-authoritative syncs across multiple domain controllers; a manual fix that grew with every server now finishes in about a minute, regardless of environment size.",
+      },
+      {
+        title: "Enterprise Incident Resolution",
+        text: "Achieved a 95% first-contact resolution rate for Microsoft global enterprise customers, owning incidents end to end across VMs, network connectivity, DNS, storage and access.",
+      },
+      {
+        title: "Hybrid Active Directory",
+        text: "Resolved sign-in failures in hybrid environments involving Kerberos, Group Policy and domain controller replication.",
+      },
+      {
+        title: "Knowledge Base",
+        text: "Co-authored internal documentation for recurring issues, reducing team incident load by 25%.",
+      },
     ],
   },
 ];
 
+// Newest first. `note` is optional (shown as a smaller line underneath).
 export const education = [
   {
     degree: "BSc in Computer Science",
     school: "WSB University",
     location: "Poland",
-    period: "Graduated 2026",
+    period: "Oct 2023 – Jul 2026",
+  },
+  {
+    degree: "Erasmus+ Exchange Semester",
+    school: "AGH University of Kraków",
+    location: "Kraków, Poland",
+    period: "Mar 2023 – Jul 2023",
   },
 ];
 
