@@ -1,5 +1,9 @@
 "use client";
 
+// ─────────────────────────────────────────────────────────────
+// THEME TOGGLE — the sun/moon button in the navbar.
+// `mounted` avoids a flash of the wrong icon before the theme is known.
+// ─────────────────────────────────────────────────────────────
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import Icon from "./Icon";

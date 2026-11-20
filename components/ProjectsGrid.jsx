@@ -1,5 +1,9 @@
 "use client";
 
+// ─────────────────────────────────────────────────────────────
+// PROJECTS GRID — filter buttons + the grid of ProjectCards.
+// Filtering happens in the browser, so this is a client component.
+// ─────────────────────────────────────────────────────────────
 import { useState } from "react";
 import ProjectCard from "./ProjectCard";
 

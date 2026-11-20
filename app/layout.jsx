@@ -1,3 +1,7 @@
+// ─────────────────────────────────────────────────────────────
+// ROOT LAYOUT — wraps every page with the fonts, theme, navbar and footer.
+// SEO title/description are set in `metadata` below.
+// ─────────────────────────────────────────────────────────────
 import { Inter, JetBrains_Mono } from "next/font/google";
 import Providers from "@/components/Providers";
 import Navbar from "@/components/Navbar";

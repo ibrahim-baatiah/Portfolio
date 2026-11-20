@@ -1,3 +1,8 @@
+// ─────────────────────────────────────────────────────────────
+// SKILLS — shown on the CV page.
+// Each group becomes one row: "group" is the label, "items" are the tags.
+// ─────────────────────────────────────────────────────────────
+
 export const skills = [
   { group: "Cloud", items: ["Microsoft Azure", "AWS"] },
   {

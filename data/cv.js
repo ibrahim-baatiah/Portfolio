@@ -1,3 +1,8 @@
+// ─────────────────────────────────────────────────────────────
+// CV — experience, education and certifications for the CV page.
+// Skills come from data/skills.js and languages from data/profile.js.
+// ─────────────────────────────────────────────────────────────
+
 export const experience = [
   {
     role: "Cloud & Infra Management Engineer",

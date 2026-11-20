@@ -1,3 +1,6 @@
+// ─────────────────────────────────────────────────────────────
+// CONTACT PAGE — contact cards on the left, message form on the right.
+// ─────────────────────────────────────────────────────────────
 import PageHeader from "@/components/PageHeader";
 import ContactForm from "@/components/ContactForm";
 import Icon from "@/components/Icon";
@@ -15,7 +18,7 @@ const channels = [
 export default function Contact() {
   return (
     <>
-      <PageHeader eyebrow="Contact" title="Let's work together" subtitle="Whether you have a question, an opportunity or just want to say hi — my inbox is open." />
+      <PageHeader eyebrow="Contact" title="Let's chat" subtitle="Got a question, an idea, or just want to chat about cloud stuff? Drop me a message, I don't bite." />
       <section className="mx-auto grid max-w-6xl gap-12 px-6 py-20 lg:grid-cols-2">
         <div className="space-y-4">
           {channels.map((c) => {

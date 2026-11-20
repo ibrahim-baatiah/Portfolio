@@ -1,3 +1,7 @@
+// ─────────────────────────────────────────────────────────────
+// PROJECTS PAGE — header + filterable project grid.
+// Projects are listed in data/projects.js.
+// ─────────────────────────────────────────────────────────────
 import PageHeader from "@/components/PageHeader";
 import ProjectsGrid from "@/components/ProjectsGrid";
 import { projects, categories } from "@/data/projects";
@@ -10,7 +14,7 @@ export default function Projects() {
       <PageHeader
         eyebrow="Projects"
         title="Things I've built"
-        subtitle="Cloud deployments, infrastructure automation, security detections and software — each one built to learn something real."
+        subtitle="Some cloud, some automation, some 'I wonder how this works'. Every one of these taught me something (usually after breaking it first)."
       />
       <section className="mx-auto max-w-6xl px-6 py-20">
         <ProjectsGrid projects={projects} categories={categories} />

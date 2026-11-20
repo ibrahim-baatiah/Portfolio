@@ -1,5 +1,9 @@
 "use client";
 
+// ─────────────────────────────────────────────────────────────
+// NAVBAR — logo, page links, theme toggle, and a menu for mobile.
+// To add/rename a page link, edit the `links` array below.
+// ─────────────────────────────────────────────────────────────
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";

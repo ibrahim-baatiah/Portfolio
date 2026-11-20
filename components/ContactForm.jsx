@@ -1,5 +1,10 @@
 "use client";
 
+// ─────────────────────────────────────────────────────────────
+// CONTACT FORM — opens the visitor's email app with the message pre-filled (mailto).
+// It needs a mail app on the visitor's device. To send straight from the site,
+// swap `submit` for a service like Formspree.
+// ─────────────────────────────────────────────────────────────
 import { useState } from "react";
 
 export default function ContactForm({ email }) {

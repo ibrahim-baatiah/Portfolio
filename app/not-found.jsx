@@ -1,3 +1,6 @@
+// ─────────────────────────────────────────────────────────────
+// 404 PAGE — shown when a URL doesn't exist.
+// ─────────────────────────────────────────────────────────────
 import Button from "@/components/Button";
 
 export default function NotFound() {

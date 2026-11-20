@@ -1,3 +1,10 @@
+/* ─────────────────────────────────────────────────────────────
+   GLOBAL STYLES & THEME COLOURS
+   Change the colours in :root (light mode) and .dark (dark mode).
+   Tailwind classes like bg-accent / text-muted read these variables
+   through the @theme block below.
+   ───────────────────────────────────────────────────────────── */
+
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));

@@ -1,5 +1,8 @@
 "use client";
 
+// ─────────────────────────────────────────────────────────────
+// PRINT BUTTON — opens the browser print dialog so the CV can be saved as PDF.
+// ─────────────────────────────────────────────────────────────
 import Icon from "./Icon";
 
 export default function PrintButton() {

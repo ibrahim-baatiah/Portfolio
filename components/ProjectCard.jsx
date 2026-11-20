@@ -1,3 +1,6 @@
+// ─────────────────────────────────────────────────────────────
+// PROJECT CARD — one project tile (title, description, tags, links).
+// ─────────────────────────────────────────────────────────────
 import Tag from "./Tag";
 import Icon from "./Icon";
 

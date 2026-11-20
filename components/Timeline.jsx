@@ -1,3 +1,7 @@
+// ─────────────────────────────────────────────────────────────
+// TIMELINE — vertical line with dots, used for experience and education.
+// Each item: { title, meta, children? }.
+// ─────────────────────────────────────────────────────────────
 export default function Timeline({ items }) {
   return (
     <ol className="space-y-8 border-l-2 border-accent pl-6">

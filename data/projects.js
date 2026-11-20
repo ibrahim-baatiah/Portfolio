@@ -1,47 +1,58 @@
+// ─────────────────────────────────────────────────────────────
+// PROJECTS — shown on the Projects page.
+//
+// To add a project, copy one object and edit it:
+//   title       – card heading
+//   description – one or two sentences, keep it friendly
+//   tags        – small pills under the description
+//   categories  – must match names in `categories` below (used by the filter)
+//   repo        – GitHub link (optional)
+//   live        – live demo link (optional, shows a "Live" button)
+// ─────────────────────────────────────────────────────────────
+
+// Helper so you only type the repo name
 const gh = (repo) => `https://github.com/ibrahim-baatiah/${repo}`;
 
+// Filter buttons on the Projects page ("All" shows everything)
 export const categories = ["All", "Cloud", "Automation", "Security", "Software"];
 
 export const projects = [
   {
     title: "AWS 3-Tier Java App",
     description:
-      "Production-style 3-tier deployment on AWS: Nginx → Tomcat → RDS MySQL with Redis sessions, load balancers, auto scaling, HTTPS, CloudFront, a Maven → SonarCloud → JFrog pipeline and CloudWatch alerting.",
+      "A Java login app deployed the 'proper' way on AWS: Nginx → Tomcat → RDS, Redis sessions, load balancers, auto scaling, HTTPS, CloudFront and alerts that email me when things break. All built by hand in the Console.",
     tags: ["AWS", "Nginx", "Tomcat", "RDS", "Redis", "CloudFront"],
     categories: ["Cloud"],
     repo: gh("aws-3tier-java-login-app"),
-    featured: true,
   },
   {
     title: "Azure AD SYSVOL Lab",
     description:
-      "Multi-region Active Directory lab: Terraform builds three domain controllers in a hub-spoke network routed through a Linux NVA, Ansible promotes the domain, and PowerShell automates SYSVOL restores.",
+      "Three domain controllers in three countries, all talking through a Linux router I set up. Terraform builds it, Ansible makes it a domain, and PowerShell fixes SYSVOL when I break it (on purpose, mostly).",
     tags: ["Azure", "Terraform", "Ansible", "PowerShell", "Active Directory"],
     categories: ["Cloud", "Automation"],
     repo: gh("windows-ad-automation"),
-    featured: true,
   },
   {
     title: "NoteWise",
     description:
-      "Cloud-native AI study platform that turns PDFs, audio and notes into summaries and deep dives, with Azure infrastructure defined in Terraform modules.",
+      "Throw your PDFs, audio and notes at it and get back summaries and deep dives, powered by AI. Built with Next.js and FastAPI, and running on Azure set up with Terraform.",
     tags: ["Next.js", "FastAPI", "PostgreSQL", "Azure Functions", "Terraform"],
     categories: ["Software", "Cloud"],
     repo: gh("notewise"),
-    featured: true,
   },
   {
     title: "Azure Sentinel Detections",
     description:
-      "SSH brute-force detections in KQL, correlated with VM restart/deallocate events, with entity mapping and a Logic Apps SOAR playbook that notifies on new incidents.",
+      "I brute-forced my own VM so Sentinel could catch me. KQL detections spot SSH attacks, link them to VM restarts, and a Logic App sends a heads-up.",
     tags: ["Microsoft Sentinel", "KQL", "Logic Apps", "Log Analytics"],
     categories: ["Security", "Cloud"],
     repo: gh("azure-sentinel"),
   },
   {
-    title: "ish — Unix Shell",
+    title: "ish: Unix Shell",
     description:
-      "A Unix shell built from scratch in C: process execution with fork/exec, pipes, I/O redirection, shell variables and script execution.",
+      "Ever wondered what actually happens when you press Enter in a terminal? I did, so I built a shell from scratch in C, with pipes, redirection and variables.",
     tags: ["C", "Linux", "Processes"],
     categories: ["Software"],
     repo: gh("ish"),
@@ -49,7 +60,7 @@ export const projects = [
   {
     title: "HTTP Server",
     description:
-      "A lightweight HTTP server in Java built on raw sockets, parsing requests and writing responses manually with no frameworks.",
+      "A tiny web server in Java with zero frameworks: just raw sockets, hand-parsed requests and a lot of respect for the people who wrote Tomcat.",
     tags: ["Java", "Networking", "Sockets"],
     categories: ["Software"],
     repo: gh("http-server"),

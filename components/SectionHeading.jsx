@@ -1,3 +1,6 @@
+// ─────────────────────────────────────────────────────────────
+// SECTION HEADING — the "01. Title ———" style heading used across pages.
+// ─────────────────────────────────────────────────────────────
 export default function SectionHeading({ number, title }) {
   return (
     <div className="mb-10 flex items-center gap-4">

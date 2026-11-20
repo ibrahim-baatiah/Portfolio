@@ -1,3 +1,8 @@
+// ─────────────────────────────────────────────────────────────
+// CV PAGE — experience, education, certifications, skills, languages.
+// Content: data/cv.js, data/skills.js, data/profile.js.
+// "Download PDF" uses the browser's print dialog (print styles are in globals.css).
+// ─────────────────────────────────────────────────────────────
 import PageHeader from "@/components/PageHeader";
 import PrintButton from "@/components/PrintButton";
 import SectionHeading from "@/components/SectionHeading";

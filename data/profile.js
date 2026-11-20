@@ -1,41 +1,47 @@
+// ─────────────────────────────────────────────────────────────
+// PROFILE — everything about you lives here.
+// Change any text below and it updates across the whole site.
+// ─────────────────────────────────────────────────────────────
+
 export const profile = {
   name: "Ibrahim Baatiah",
+  firstName: "Ibrahim",
+  // Shown in the navbar logo ("IB.")
   initials: "IB",
   title: "Cloud & Infra Management Engineer",
   location: "Poland",
+
+  // Home page hero
+  greeting: "Hi, I'm Ibrahim 👋",
+  headline: "Cloud Engineer | Automation Nerd | Builder of Things",
   tagline:
-    "I build and automate cloud infrastructure on Azure and AWS — and write the software that runs on top of it.",
+    "I spin up infrastructure on Azure and AWS, automate the boring bits, and occasionally build things from scratch just to see how they work.",
+
   email: "ibrahimbaatiah@gmail.com",
   links: {
     github: "https://github.com/ibrahim-baatiah",
     linkedin: "https://www.linkedin.com/in/ibrahim-baatiah-2183b21a0/",
   },
-  about: [
-    "I'm a Cloud & Infra Management Engineer at LTM, where I work with Microsoft's global enterprise customers on Azure, Windows Server and Active Directory environments.",
-    "Outside of work, I build things end to end: provisioning infrastructure with Terraform, configuring it with Ansible and PowerShell, shipping apps in Docker, and writing the code that runs on top. I like understanding how things work under the hood — which is why I've also built a Unix shell in C and an HTTP server in Java from scratch.",
-    "I graduated in Computer Science from WSB University in 2026, and I'm currently preparing for the AWS Certified Solutions Architect – Associate exam.",
-  ],
+
+  // Languages you speak (used on the CV page)
   languages: [
     { name: "Arabic", level: "Native" },
     { name: "English", level: "C1" },
   ],
-  learning: "AWS Certified Solutions Architect – Associate",
 };
 
-export const focusAreas = [
-  {
-    title: "Cloud & Infrastructure",
-    text: "Designing and running workloads on Azure and AWS — networking, compute, storage, identity and monitoring.",
-    icon: "cloud",
-  },
-  {
-    title: "Automation & IaC",
-    text: "Reusable Terraform modules, Ansible playbooks, Docker images and PowerShell/Bash tooling that remove manual work.",
-    icon: "gear",
-  },
-  {
-    title: "Software",
-    text: "Full-stack apps with FastAPI and Next.js, plus low-level projects in C and Java to learn how systems really work.",
-    icon: "code",
-  },
+// ─────────────────────────────────────────────────────────────
+// ABOUT PAGE — "My Story"
+// Each string is one paragraph. Add, remove or reorder freely.
+// You can use **double asterisks** to highlight a word in the accent colour.
+// ─────────────────────────────────────────────────────────────
+export const story = [
+  "Hi, I'm **Ibrahim**, a cloud engineer who genuinely enjoys the moment something finally works after it has spent hours refusing to.",
+  "By day, I'm a **Cloud & Infra Management Engineer at LTM**, helping Microsoft's enterprise customers when their Azure, Windows Server or Active Directory environments decide to misbehave. VMs that won't boot, DNS that resolves everything except the one thing you need, domain controllers that stopped talking to each other. You name it, I've probably stared at it at 4pm on a Friday.",
+  "One fix kept coming up again and again: a SYSVOL replication repair that took about 40 minutes of clicking every single time. So I wrote a **PowerShell** script for it and got it down to around 10. Then, because I apparently can't leave things alone, I built a whole multi-region AD lab with **Terraform** and **Ansible** just to break it and fix it on purpose.",
+  "That's pretty much how I learn: I build it myself. I wrote a Unix shell in **C** to understand what actually happens when you hit Enter in a terminal, and an HTTP server in **Java** with nothing but raw sockets. I deployed a full 3-tier app on **AWS** by hand in the Console, one service at a time, then shut it down before the bill got scary.",
+  "I graduated in Computer Science from **WSB University** in 2026, and right now I'm studying for the **AWS Solutions Architect** exam. Wish me luck.",
 ];
+
+// Little sign-off at the end of the story
+export const storySignOff = "That's me :)";

@@ -1,3 +1,8 @@
+// ─────────────────────────────────────────────────────────────
+// BUTTON — link styled as a button.
+// variant: "primary" | "outline" | "hero" | "heroOutline" (hero ones are for coloured banners).
+// Internal links use Next.js <Link>; mailto/external links use a plain <a>.
+// ─────────────────────────────────────────────────────────────
 import Link from "next/link";
 
 const styles = {

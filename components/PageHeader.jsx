@@ -1,3 +1,7 @@
+// ─────────────────────────────────────────────────────────────
+// PAGE HEADER — the coloured banner at the top of CV, Projects and Contact.
+// Colours come from --hero in globals.css (gradient in light, navy in dark).
+// ─────────────────────────────────────────────────────────────
 export default function PageHeader({ eyebrow, title, subtitle, children }) {
   return (
     <section className="hero-bg print-tight">
