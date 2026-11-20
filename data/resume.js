@@ -14,33 +14,33 @@ export const resumeHeader = {
   website: "https://ibrahimdev.cloud",
 };
 
-// Projects on the resume: short, professional one-liners + repo link
+// Projects on the resume: one plain sentence on what you built + repo link
 // (the casual descriptions in data/projects.js are for the website)
 export const resumeProjects = [
   {
     title: "AWS 3-Tier Java App",
     repo: gh("aws-3tier-java-login-app"),
-    text: "Nginx → Tomcat → RDS MySQL with Redis sessions, NLBs, Auto Scaling, CloudFront/ACM, Secrets Manager, a Maven → SonarCloud → JFrog pipeline and CloudWatch alerting.",
+    text: "Deployed a Java login app on AWS as a highly available 3-tier architecture with load balancing, auto scaling, HTTPS and monitoring.",
   },
   {
     title: "Azure Multi-Region AD Lab",
     repo: gh("windows-ad-automation"),
-    text: "Terraform-built hub-spoke network across 3 regions routed through a Linux NVA; Ansible promotes the domain and PowerShell automates SYSVOL recovery.",
+    text: "Built a 3-region Active Directory lab on Azure with Terraform and Ansible to reproduce and automate SYSVOL replication fixes.",
   },
   {
     title: "NoteWise",
     repo: gh("notewise"),
-    text: "AI study platform (Next.js, FastAPI, PostgreSQL) on Azure Functions and Blob Storage, with infrastructure in Terraform modules.",
+    text: "Built a full-stack AI study app that turns PDFs, audio and notes into summaries, deployed on Azure with Terraform.",
   },
   {
     title: "Azure Sentinel Detections",
     repo: gh("azure-sentinel"),
-    text: "KQL rules detecting SSH brute-force bursts correlated with VM power events, plus a Logic Apps SOAR playbook.",
+    text: "Wrote Microsoft Sentinel detections in KQL that flag SSH brute-force attacks and trigger automated alerts.",
   },
   {
     title: "ish (Unix Shell in C)",
     repo: gh("ish"),
-    text: "Shell built from scratch with fork/exec process execution, pipes, I/O redirection and shell variables.",
+    text: "Wrote a Unix shell from scratch in C, with pipes, I/O redirection and variables, to learn how processes work.",
   },
 ];
 
