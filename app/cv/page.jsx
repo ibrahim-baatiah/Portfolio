@@ -10,7 +10,7 @@ import Timeline from "@/components/Timeline";
 import Tag from "@/components/Tag";
 import Icon from "@/components/Icon";
 import { profile } from "@/data/profile";
-import { experience, education, certifications } from "@/data/cv";
+import { experience, education, certifications, coursework } from "@/data/cv";
 import { skills } from "@/data/skills";
 
 export const metadata = { title: "CV" };
@@ -65,6 +65,10 @@ export default function CV() {
         <section>
           <SectionHeading number="02" title="Education" />
           <Timeline items={education.map((e) => ({ title: e.degree, meta: `${e.school} · ${e.location} · ${e.period}` }))} />
+          {/* Relevant coursework (edit the list in data/cv.js) */}
+          <p className="mt-6 text-sm leading-relaxed text-muted">
+            <span className="font-semibold text-text">Relevant coursework:</span> {coursework.join(", ")}
+          </p>
         </section>
 
         <section>

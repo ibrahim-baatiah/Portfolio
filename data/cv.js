@@ -10,7 +10,7 @@ export const experience = [
     role: "Cloud & Infra Management Engineer",
     company: "LTM",
     period: "Mar 2024 – Present",
-    location: "Kraków, Poland",
+    location: "Krakow, Poland",
     points: [
       {
         title: "SYSVOL Repair Automation",
@@ -28,11 +28,15 @@ export const experience = [
         title: "Knowledge Base",
         text: "Co-authored internal documentation for recurring issues, reducing team incident load by 25%.",
       },
+      {
+        title: "VM Troubleshooting",
+        text: "Diagnosed and resolved Azure VM failures, including broken SSH/RDP access and boot failures, tracing root causes across the full stack from the underlying infrastructure and host backend to the guest OS.",
+      },
     ],
   },
 ];
 
-// Newest first. `note` is optional (shown as a smaller line underneath).
+// Newest first.
 export const education = [
   {
     degree: "BSc in Computer Science",
@@ -41,11 +45,21 @@ export const education = [
     period: "Oct 2023 – Jul 2026",
   },
   {
-    degree: "Erasmus+ Exchange Semester",
-    school: "AGH University of Kraków",
-    location: "Kraków, Poland",
+    degree: "Erasmus+ Exchange, Computer Science",
+    school: "AGH University of Krakow",
+    location: "Krakow, Poland",
     period: "Mar 2023 – Jul 2023",
   },
+];
+
+// Shown under Education on the CV page
+export const coursework = [
+  "Data Structures & Algorithms",
+  "Object-Oriented Programming (Java)",
+  "Operating Systems",
+  "Computer Networks",
+  "Databases",
+  "Software Engineering",
 ];
 
 export const certifications = [
