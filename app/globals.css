@@ -1,0 +1,119 @@
+/* ─────────────────────────────────────────────────────────────
+   GLOBAL STYLES & THEME COLOURS
+   Change the colours in :root (light mode) and .dark (dark mode).
+   Tailwind classes like bg-accent / text-muted read these variables
+   through the @theme block below.
+   ───────────────────────────────────────────────────────────── */
+
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Light theme: warm cream + purple → pink → orange */
+:root {
+  --bg: #fff8f3;
+  --bg-alt: #ffffff;
+  --surface: #ffffff;
+  --border: #f3e4dc;
+  --text: #1c1530;
+  --muted: #6b6480;
+  --accent: #ff4d8d;
+  --accent-soft: #ffe4ee;
+  --accent-2: #8b3dff;
+  --on-accent: #ffffff;
+  --hero: linear-gradient(120deg, #8b3dff 0%, #ff4d8d 50%, #ffa94d 100%);
+  --hero-text: #ffffff;
+  --hero-muted: rgba(255, 255, 255, 0.85);
+  --avatar: rgba(255, 255, 255, 0.18);
+  --avatar-text: #ffffff;
+  --shadow: 0 10px 30px -15px rgba(139, 61, 255, 0.25);
+}
+
+/* Dark theme: deep navy + teal / blue */
+.dark {
+  --bg: #0b0f1a;
+  --bg-alt: #111727;
+  --surface: #151c2e;
+  --border: #222b40;
+  --text: #e7e9f0;
+  --muted: #8b93a7;
+  --accent: #4fd1c5;
+  --accent-soft: rgba(79, 209, 197, 0.12);
+  --accent-2: #7c8cf8;
+  --on-accent: #0b0f1a;
+  --hero: radial-gradient(circle at 85% 20%, rgba(124, 140, 248, 0.18), transparent 45%), #0b0f1a;
+  --hero-text: #e7e9f0;
+  --hero-muted: #8b93a7;
+  --avatar: linear-gradient(135deg, #4fd1c5, #7c8cf8);
+  --avatar-text: #0b0f1a;
+  --shadow: none;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-alt: var(--bg-alt);
+  --color-surface: var(--surface);
+  --color-border: var(--border);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-2: var(--accent-2);
+  --color-on-accent: var(--on-accent);
+  --color-hero-text: var(--hero-text);
+  --color-hero-muted: var(--hero-muted);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-mono), ui-monospace, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.hero-bg {
+  background: var(--hero);
+}
+
+.avatar {
+  background: var(--avatar);
+  color: var(--avatar-text);
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  border-radius: 0.75rem;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  :root,
+  .dark {
+    --bg: #ffffff;
+    --bg-alt: #ffffff;
+    --surface: #ffffff;
+    --border: #dddddd;
+    --text: #111111;
+    --muted: #444444;
+    --accent: #111111;
+    --accent-2: #111111;
+    --accent-soft: #f2f2f2;
+    --shadow: none;
+  }
+  body {
+    font-size: 11pt;
+  }
+  .print-tight {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+}
