@@ -63,7 +63,7 @@
   --color-hero-text: var(--hero-text);
   --color-hero-muted: var(--hero-muted);
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-mono: var(--font-mono), ui-monospace, monospace;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
 }
 
 html {

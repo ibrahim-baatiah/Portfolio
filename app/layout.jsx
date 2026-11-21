@@ -10,7 +10,7 @@ import { profile } from "@/data/profile";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" });
+const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrains" });
 
 export const metadata = {
   metadataBase: new URL("https://ibrahimdev.cloud"),
